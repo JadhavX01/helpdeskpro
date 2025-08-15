@@ -1,0 +1,257 @@
+/* Main Container */
+.tickets-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.tickets-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tickets-header h2 {
+  color: #2c3e50;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+/* Form Styles */
+.ticket-form {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.ticket-form h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-row select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-row button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.form-row button:hover {
+  background-color: #2980b9;
+}
+
+.form-row button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Status Filter */
+.status-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.status-filter button {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.status-filter button.active {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+/* Table Styles */
+.tickets-table-container {
+  overflow-x: auto;
+}
+
+.tickets-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.tickets-table th {
+  background-color: #f8f9fa;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.tickets-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: top;
+}
+
+.tickets-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Priority and Status Badges */
+.priority-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.priority-badge.high {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.priority-badge.medium {
+  background-color: #f39c12;
+  color: white;
+}
+
+.priority-badge.low {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-badge.open {
+  background-color: #f1c40f;
+  color: #000;
+}
+
+.status-badge.in_progress {
+  background-color: #3498db;
+  color: white;
+}
+
+.status-badge.resolved {
+  background-color: #2ecc71;
+  color: white;
+}
+
+/* Priority Row Coloring */
+tr.priority-high {
+  border-left: 4px solid #e74c3c;
+}
+
+tr.priority-medium {
+  border-left: 4px solid #f39c12;
+}
+
+tr.priority-low {
+  border-left: 4px solid #2ecc71;
+}
+
+/* Admin Actions */
+.tickets-table select {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+}
+
+/* Loading and Empty States */
+.loading,
+.no-tickets {
+  text-align: center;
+  padding: 40px;
+  color: #7f8c8d;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+/* Refresh Button */
+.refresh-btn {
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.refresh-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.refresh-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tickets-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .status-filter {
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+  }
+}
