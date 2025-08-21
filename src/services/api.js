@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api', // backend base URL
+  baseURL: 'https://helpdeskpro-server.onrender.com/api', // ✅ Added /api
 });
 
 // Add token to every request if available
